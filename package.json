@@ -1,0 +1,30 @@
+{
+  "name": "css_practice_project10",
+  "version": "1.0.0",
+  "description": "10th project for css practice from nomad coder.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/develcrafter/css_practice_project10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/develcrafter/css_practice_project10/issues"
+  },
+  "homepage": "https://github.com/develcrafter/css_practice_project10#readme",
+  "scripts": {
+    "start": "parcel pj10_clone1.html"
+  },
+  "dependencies": {
+    "postcss-preset-env": "^6.4.0"
+  },
+  "postcss" :{
+    "plugins": {
+      "postcss-preset-env": {
+        "stage": 0
+      }
+    }
+  }
+}
