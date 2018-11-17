@@ -1,0 +1,282 @@
+:root {
+  --redColor: #f44336;
+  --grayColor: #616161;
+  --grayLink: #e0e0e0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  padding: 21px 34px;
+  overflow: hidden;
+}
+
+.header {
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: bolder;
+}
+
+.header__bar:last-of-type {
+  color: var(--redColor);
+}
+
+.main {
+  display: flex;
+  /* min-height: 1000px; */
+  /* height: 1000px; */
+}
+
+.title__grid {
+  margin-right: 34px;
+  color: var(--redColor);
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.title__grid.text {
+  position: relative;
+}
+
+.head__bar {
+  width: 100%;
+  height: 5px;
+  background-color: black;
+}
+
+.title__grid .head__bar {
+  width: 144px;
+  background-color: var(--redColor);
+}
+
+.title__grid .main__title {
+  font-size: 89px;
+  transform: translate(-38%, 75%) rotate(-90deg);
+
+  position: absolute;
+}
+
+.title__row.bakcground__row {
+  width: 233px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 13px,
+    var(--grayColor) 14px,
+    var(--grayColor) 15px
+  );
+}
+
+.grid__column {
+  margin-right: 34px;
+  width: 100%;
+  height: calc(100vh - 144px);
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-rows: 89px;
+  grid-template-rows: repeat(3, minmax(89px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.grid__article {
+  /* margin-top: 5px; */
+  height: 100%;
+  padding: 0 8px;
+  border-right: 1px solid #e0e0e0;
+
+  display: grid;
+  grid-template-rows: 5px min-content auto min-content;
+}
+
+.grid__article .article__number {
+  font-size: 2rem;
+}
+
+.article__title {
+  font-size: 1.3rem;
+}
+
+.grid__article .article__meta {
+  text-align: left;
+  align-self: end;
+}
+
+.grid__article:nth-child(2) {
+  grid-area: span 2 / span 1;
+}
+
+.grid__article:nth-child(3) {
+  grid-area: span 3 / span 2;
+  overflow: hidden;
+}
+
+.grid__article:nth-child(3) .article__number,
+.grid__article:nth-child(8) .article__number {
+  font-size: 4rem;
+}
+
+.grid__article:nth-child(3) .article__info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.grid__article:nth-child(3) .article__title {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+}
+
+/* .grid__article:nth-child(3) .article__photo {
+    height: 40vh;
+    background-image: url();
+    background-size: cover;
+    background-position: top center;
+    align-self: end;
+    
+} */
+
+.grid__article:nth-child(2) img {
+  padding-top: 5px;
+  align-self: start;
+  width: 100%;
+  height: 20vh;
+}
+
+.grid__article:nth-child(3) img {
+  align-self: end;
+
+  width: 100%;
+  height: 40vh;
+}
+
+.grid__article:nth-child(4) img {
+  width: 100%;
+  height: 20vh;
+  /* padding-bottom: 5px; */
+}
+
+.grid__article:nth-child(3) .article__meta {
+  text-align: right;
+}
+
+.grid__article:nth-child(4) {
+  grid-area: span 2;
+}
+
+.grid__article:nth-child(8) {
+  padding-top: 5px;
+  grid-area: span 1 / span 2;
+  border-right: none;
+}
+
+.grid__article:nth-child(5) {
+  padding-top: 5px;
+}
+
+.article__author,
+.article__date {
+  font-size: 10px;
+}
+
+.grid__article:nth-child(9),
+.grid__article:nth-child(10) {
+  border-right: none;
+}
+
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  /* display: flex;
+    justify-content: space-between; */
+
+  margin-top: 21px;
+}
+
+.page__list {
+  justify-self: start;
+  display: flex;
+}
+.page__list .page {
+  margin-right: 8px;
+  /* padding-right: 21px; */
+}
+
+.page__link {
+  text-decoration: none;
+  color: var(--grayLink);
+
+  font-size: 13px;
+  padding-right: 21px;
+  border-bottom: 2px solid var(--grayLink);
+
+  font-weight: bold;
+}
+
+.page__link.link--selected {
+  color: var(--redColor);
+  border-bottom: 2px solid var(--grayColor);
+}
+
+.web-page__metas {
+  justify-self: center;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+
+  font-size: 13px;
+}
+
+.web-page__metas .web-meta__title {
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.footer__logo {
+  justify-self: end;
+  font-size: 1.7rem;
+}
+
+.fakeBkg {
+    background-image: linear-gradient(rgba(211, 47, 47, 0.6), rgba(211, 47, 47, 0.8)), url(https://i.pinimg.com/564x/bf/a6/24/bfa624d17adba220fdde07c1ea2e4b6d.jpg);
+    width: 25%;
+    height: 100vh;
+    position: fixed;
+    background-size: cover;
+    z-index: -9;
+
+    top: -30px;
+    right: -80px;
+
+}
